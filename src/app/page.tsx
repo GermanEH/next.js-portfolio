@@ -18,8 +18,6 @@ export default function Home() {
     isProjectsClicked: false,
     isContactClicked: false
   })
-  // const [isProjectsClicked, setProjectsClicked] = useState(false)
-  // const [isContactClicked, setContactClicked] = useState(false)
 
   const handleClickedState = (itemClicked: string) => {
     setClickedState(prevState => {
@@ -34,21 +32,6 @@ export default function Home() {
       return updatedState
     })
     }
-  // const handleAboutClick = () => {
-  //   setIsAboutClicked(!isAboutClicked)
-  //   setProjectsClicked(false)
-  //   setContactClicked(false)
-  // }
-  // const handleProjectsClick = () => {
-  //   setIsAboutClicked(false)
-  //   setProjectsClicked(!isProjectsClicked)
-  //   setContactClicked(false)
-  // }
-  // const handleContactClick = () => {
-  //   setIsAboutClicked(false)
-  //   setProjectsClicked(false)
-  //   setContactClicked(!isContactClicked)
-  // }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between py-10">
@@ -63,8 +46,6 @@ export default function Home() {
           priority
         />
       <h2 className="ml-2 font-bold">Germán Horianski</h2>
-      {/* <div className="ml-96">
-      </div> */}
       </div>
       <div>
         <a 
@@ -76,40 +57,22 @@ export default function Home() {
       </div>
     </div>
       {isClickedState.isAboutClicked ? <>
-        <About/></> :
+        <About handleClickedState={handleClickedState}/></> :
       isClickedState.isProjectsClicked ? <>
-      <Projects/></> :
+      <Projects handleClickedState={handleClickedState}/></> :
       isClickedState.isContactClicked ? <>
-      <Contact/>
+      <Contact handleClickedState={handleClickedState}/>
       </> :
       <HeroText/>
       }
 
       <div className="grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        {/* <a
-          // href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Home{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a> */}
         <a
-          // href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 transform 
           ${isClickedState.isAboutClicked ? ' transform-about preserve-3d perspective-1000 backface-hidden' : ''} transition-transform duration-1000
           ${isClickedState.isProjectsClicked ? 'invisible opacity-0' : ''}
           ${isClickedState.isContactClicked ? 'invisible opacity-0' : ''}
           `} onClick={() => handleClickedState('isAboutClicked')}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
@@ -124,14 +87,12 @@ export default function Home() {
         </a>
 
         <a
-          // href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 transform 
-          ${isClickedState.isProjectsClicked ? 'transform-projects preserve-3d perspective-1000 backface-hidden' : ''} transition-transform duration-500
+          ${isClickedState.isProjectsClicked ? 'transform-projects preserve-3d perspective-1000 backface-hidden' : ''} transition-transform duration-1000
           ${isClickedState.isAboutClicked ? 'invisible opacity-0' : ''}
           ${isClickedState.isContactClicked ? 'invisible opacity-0' : ''}
           `} 
           onClick={() => handleClickedState('isProjectsClicked')}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
@@ -146,13 +107,11 @@ export default function Home() {
         </a>
 
         <a
-          // href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 
-          ${isClickedState.isContactClicked ? 'transform-contact preserve-3d perspective-1000 backface-hidden' : ''} transition-transform duration-500
+          ${isClickedState.isContactClicked ? 'transform-contact preserve-3d perspective-1000 backface-hidden' : ''} transition-transform duration-1000
           ${isClickedState.isAboutClicked ? 'invisible opacity-0' : ''}
           ${isClickedState.isProjectsClicked ? 'invisible opacity-0' : ''}
           `} onClick={() => handleClickedState('isContactClicked')}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
