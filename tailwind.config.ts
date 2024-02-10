@@ -1,7 +1,9 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
+    "./src/**/*/.{js, jsx}",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -31,8 +33,37 @@ const config: Config = {
         '240': '95rem',
         '242': '96rem',
       },
+      scale: {
+        '500': '5'
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({addUtilities}: any){
+      addUtilities({
+        ".transform-about": {
+          'transform': 'rotateY(180deg) scale(5) translateX(-30%) translateY(-30%)'
+          // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
+        },
+        ".transform-projects": {
+          'transform': 'rotateY(180deg) scale(5) translateX(-10%) translateY(-30%)'
+          // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
+        },
+        ".transform-contact": {
+          'transform': 'rotateY(180deg) scale(5) translateX(10%) translateY(-30%)'
+          // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
+        },
+        ".preserve-3d": {
+          'transformStyle': 'preserve-3d'
+        },
+        ".perspective-1000": {
+          'perspective': '1000px'
+        },
+        ".backface-hidden": {
+          'backfaceVisibility': 'hidden'
+        }
+      })
+    })
+  ],
 };
 export default config;
