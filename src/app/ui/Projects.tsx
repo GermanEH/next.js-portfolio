@@ -8,7 +8,7 @@ export default function Projects({handleClickedState}:any) {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsVisible(true);
-    }, 500);
+    }, 400);
 
     return () => clearTimeout(timeoutId);
   }, []);
