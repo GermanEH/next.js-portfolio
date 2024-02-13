@@ -70,7 +70,10 @@ export default function Home() {
       <HeroText/>
 
       <div className={`grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left pb-20`}>
-        <div className={`preserve-3d perspective-1000 transform 
+        <CardFlip title='About me' subtitle='Learn about my academic background!' isClickedState={isClickedState} handleClickedState={handleClickedState} clickedSection={'isAboutClicked'}/>
+        <CardFlip title='Projects' subtitle="See what I've built." isClickedState={isClickedState} handleClickedState={handleClickedState} clickedSection={'isProjectsClicked'}/>
+        <CardFlip title='Contact' subtitle="Let's connect!" isClickedState={isClickedState} handleClickedState={handleClickedState} clickedSection={'isContactClicked'}/>
+        {/* <div className={`preserve-3d perspective-1000 transform 
           ${isClickedState.isAboutClicked ? ' transform-about' : ''} transition-transform duration-700 `}>
         <a className={`absolute group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 
           hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 backface-hidden 
@@ -98,8 +101,8 @@ export default function Home() {
               </p>
               <div className="no-transform-about w-[240px] h-[200px]"></div>
         </div>
-      </div>
-      <div className={`preserve-3d perspective-1000 transform 
+      </div> */}
+      {/* <div className={`preserve-3d perspective-1000 transform 
           ${isClickedState.isProjectsClicked ? ' transform-projects' : ''} transition-transform duration-700`}>
           <a className={`absolute group rounded-lg border border-transparent pl-5 pr-24 pt-4 pb-8 transition-colors hover:border-gray-300 hover:bg-gray-100 
           hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 backface-hidden 
@@ -157,8 +160,8 @@ export default function Home() {
               </p>
               <div className="no-transform-about w-[230px] h-[200px]"></div>  
         </div>
-      </div>
-      </div>
+      </div>*/}
+      </div> 
     </main>
   );
 }

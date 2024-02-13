@@ -14,7 +14,7 @@ export default function About() {
   }, []);
   return (
     <>
-      <div className={`absolute lg:max-w-5xl lg:w-full p-4 lg:mt-56 z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000`}>
+      <div className={`absolute lg:max-w-5xl lg:w-full p-4 lg:mt-48 ml-8 z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000`}>
         <p>Looking for a React/React Native developer with experience in high demand work environment? Look no further! You reached the right place 🤩 
         With me in your team, you will have an analitic, commited, and strong client-oriented professional 💻💼 </p>
         <h3>Stack:</h3>

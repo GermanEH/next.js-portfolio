@@ -1,54 +1,51 @@
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+interface CardFlipProps {
+  title: string;
+  subtitle: string;
+  isClickedState: any;
+  handleClickedState: any;
+  clickedSection: string;
+}
 
-const CardFlip = (isClickedState: any, handleClickedState:any) => {
-
-    const [ isFlipped, setIsFlipped ] = useState(false)
-    const [ isAnimating, setIsAnimating ] = useState(false)
-
-    const handleFlip = () => {
-        if(!isAnimating) {
-            setIsFlipped(!isFlipped)
-            setIsAnimating(true)
-        }
-    }
+const CardFlip: React.FC<CardFlipProps> = ({title, subtitle, isClickedState, handleClickedState, clickedSection}) => {
+console.log(isClickedState)
   return (
-    <div className="flip-card" onClick={handleFlip}>
-        <motion.div
-        className="flip-card-inner w-[100%] h-[100%]"
-        initial={false}
-        animate={{rotateY: isFlipped ? 180:360, translateY: isFlipped ? 50 : 0, translateX: isFlipped ? 365 : 0, scaleY: isFlipped ? 10 : 1, scaleX: isFlipped ? 4.5 : 1}}
-        // transform': 'rotateY(180deg) scale(5) translateX(10%) translateY(-30%)
-        //     // , rotateX: isFlipped ? -30:330}}
-        transition={{duration: 0.2, animationDirection: "normal"}}
-        onAnimationComplete={() => setIsAnimating(false)}>
-
-        <a
-          className={`flip-card-front group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 
-          hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 backface-hidden
-          `} onClick={() => handleClickedState('isAboutClicked')}
+    <>
+                <div className={`preserve-3d perspective-1000 transform 
+          ${(title === 'About me' && isClickedState.isAboutClicked) ? ' transform-about' : 
+          (title === 'Projects' && isClickedState.isProjectsClicked) ? 'transform-projects' : 
+          (title === 'Contact' && isClickedState.isContactClicked) ? 'transform-contact' : '' } transition-transform duration-700 `}>
+        <a className={`absolute group rounded-lg border border-transparent ${ title === 'About me' ? 'px-5 py-4' : 'pl-5 pr-24 pt-4 pb-8' } transition-colors hover:border-gray-300 hover:bg-gray-100 
+          hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 backface-hidden 
+          ${(title === 'About me' && isClickedState.isProjectsClicked) ? 'invisible opacity-0' : ''}
+          ${(title === 'About me' &&  isClickedState.isContactClicked) ? 'invisible opacity-0' : ''}
+          ${(title === 'Projects' &&  isClickedState.isAboutClicked) ? 'invisible opacity-0' : ''}
+          ${(title === 'Projects' &&  isClickedState.isContactClicked) ? 'invisible opacity-0' : ''}
+          ${(title === 'Contact' &&  isClickedState.isAboutClicked) ? 'invisible opacity-0' : ''}
+          ${(title === 'Contact' &&  isClickedState.isProjectsClicked) ? 'invisible opacity-0' : ''}
+          `} onClick={() => handleClickedState(clickedSection)}
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            About me{" "}
+            {title}{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about my academic background!
+            {subtitle}
           </p>
         </a>
-
-        <div className="flip-card-back max-w-5xl w-full font-mono lg:flex">
-        <p className="text-4xl flex w-full justify-center lg:static lg:p-4 border rounded-lg border-gray-300 bg-gray-100 dark:border-neutral-700 dark:bg-gray-700">
-        &larr;
-          About me
-        </p>
-
+        <div className={`absolute overflow-hidden font-mono
+           backface-hidden rotate-y-180 rounded-[2px]
+           dark:bg-slate-800`} onClick={() => handleClickedState(clickedSection)}>        
+              <h2 className="text-4xl no-transform-about">
+              &larr;
+               {"  " + title }
+              </h2>
+              <div className="no-transform-about w-[230px] h-[200px]"></div>
+        </div>
       </div>
-        </motion.div>
-    </div>
+    </>
   )
 }
 
