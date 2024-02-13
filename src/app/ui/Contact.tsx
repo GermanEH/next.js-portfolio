@@ -8,22 +8,42 @@ export default function Contact({handleClickedState}:any) {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsVisible(true);
-    }, 400);
+    }, 300);
 
     return () => clearTimeout(timeoutId);
   }, []);
   return (
     <>
-      {isVisible && (<div className="z-10 max-w-5xl w-full h-110 font-mono lg:flex" onClick={() => handleClickedState('isContactClicked')}>
-        {/* <p className="text-8xl fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"> */}
-        <p className="text-4xl flex w-full justify-center lg:static lg:p-4 border rounded-lg border-gray-300 bg-gray-100 dark:border-neutral-700 dark:bg-neutral-800/30">
-          &larr;
-          Contact
-        </p>
-        {/* <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-        </div> */}
+      <div className={`absolute lg:max-w-5xl lg:w-full p-4 lg:mt-44 z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000 grid grid-cols-2 items-center`}>
+        <section className='flex flex-col justify-center items-center'>
+          <div className="w-72 h-24 mb-2 flex flex-col justify-center items-center border dark:border-neutral-700 dark:bg-slate-900">
+            <img src="/logo.png" height={'50px'} width={'50px'}></img>
+            <p>Mar del Plata, Argentina</p>
+          </div>
+          <div className="w-72 h-24 mb-2 flex flex-col justify-center items-center border dark:border-neutral-700 dark:bg-slate-900">
+          <img></img>
+            <p>+5492236216726</p>
+          </div>
+          <div className="w-72 h-24 mb-2 flex flex-col justify-center items-center border dark:border-neutral-700 dark:bg-slate-900">
+          <img></img>
+            <p>germanhdev@gmail.com</p>
+            </div>
+          <div className="w-72 h-24 mb-2 flex flex-col justify-center items-center border dark:border-neutral-700 dark:bg-slate-900">
+          <img></img>
+            <p>Freelancer</p>
+          </div>
+        </section>
+        <section className='flex flex-col justify-center items-center'>
+        <h2 className="text-xl font-bold mb-4">Send a message</h2>
+          <form className='flex flex-col justify-center items-center p-4'>
+            <input type="text" placeholder="Email" className='p-2 m-4 rounded text-black' />
+            <input type="text" placeholder="Full Name" className='p-2 m-4 rounded text-black'/>
+            <input type="text" placeholder="Subject" className='p-2 m-4 rounded text-black'/>
+            <input type="text" placeholder="Message" className='p-2 m-4 rounded text-black'/>
+            <button type="submit" className="mt-4 pt-2 pb-2 pl-8 pr-8 rounded-lg border dark:border-neutral-700 dark:bg-slate-900">Send</button>
+          </form>
+        </section>
       </div>
-      )}
     </>
   );
 }

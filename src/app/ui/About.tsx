@@ -2,28 +2,34 @@
 
 import {useState, useEffect} from 'react'
 
-export default function About({handleClickedState}:any) {
+export default function About() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsVisible(true);
-    }, 400);
+    }, 380);
 
     return () => clearTimeout(timeoutId);
   }, []);
   return (
     <>
-      {isVisible && (<div className="max-w-5xl w-full h-110 font-mono lg:flex" onClick={() => handleClickedState('isAboutClicked')}>
-        {/* <p className="text-8xl fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"> */}
-        <p className="text-4xl flex w-full justify-center lg:static lg:p-4 border rounded-lg border-gray-300 bg-gray-100 dark:border-neutral-700 dark:bg-neutral-800/30">
-        &larr;
-          About
-        </p>
-        {/* <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-        </div> */}
+      <div className={`absolute lg:max-w-5xl lg:w-full p-4 lg:mt-56 z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000`}>
+        <p>Looking for a React/React Native developer with experience in high demand work environment? Look no further! You reached the right place 🤩 
+        With me in your team, you will have an analitic, commited, and strong client-oriented professional 💻💼 </p>
+        <h3>Stack:</h3>
+        <ul>
+          <li>✅ React JS, and React Native</li>
+          <li>✅ Node and Express JS</li>
+          <li>✅ PostgreSQL</li>
+          <li>✅ Mongo DB</li>
+        </ul>
+        <p>When I sat down to write my first lines of code I realized that software is the ideal oportunity to connect my love por creative and logic problem-solving, with my ambition of having a positive and meaningful impact on people's lives.</p>
+        <h3>Main achievments:</h3>
+        <p>During my studies at Henry, I lead the two developments projects by free choice of the respective teams, both with great outcomes.</p>
+        <p>If you are looking for a developer with experience in high demand work enviroments, and with experience in development of IT projects, I am ideal for joining your team.</p>
+        <p>Let's get in touch! 🤜🏼 🤛🏼 🚀</p>
       </div>
-      )}
     </>
   );
 }

@@ -41,16 +41,26 @@ const config: Config = {
   plugins: [
     plugin(function ({addUtilities}: any){
       addUtilities({
+        ".rotate-y-180": {
+          "transform": 'rotateY(180deg) translateY(-80%)'
+        },
         ".transform-about": {
-          'transform': 'rotateY(180deg) scale(5) translateX(-30%) translateY(-30%)'
+          'transform': 'rotateY(180deg) scaleY(2.3) scaleX(4.5) translateX(-30%) translateY(-50%)',
+          // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
+        },
+        ".translate": {
+          'transform': 'translateY(-50%)'
+        },
+        ".no-transform-about": {
+          'transform': 'scaleY(0.43) scaleX(0.22)'
           // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
         },
         ".transform-projects": {
-          'transform': 'rotateY(180deg) scale(5) translateX(-10%) translateY(-30%)'
+          'transform': 'rotateY(180deg) scaleY(2.3) scaleX(4.5) translateX(-6.5%) translateY(-30%)',
           // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
         },
         ".transform-contact": {
-          'transform': 'rotateY(180deg) scale(5) translateX(10%) translateY(-30%)'
+          'transform': 'rotateY(180deg) scaleY(2.3) scaleX(4.5) translateX(16%) translateY(-30%)'
           // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
         },
         ".preserve-3d": {
@@ -61,6 +71,19 @@ const config: Config = {
         },
         ".backface-hidden": {
           'backfaceVisibility': 'hidden'
+        },
+        ".flip-card-inner":{
+          "transition": 'transform 0.6s',
+          "transform-style": "preserve-3d"
+        },
+        ".flip-card-front":{
+          "position":"absolute",
+          'backfaceVisibility': 'hidden',
+        },
+         ".flip-card-back": {
+          "position":"absolute",
+          'backfaceVisibility': 'hidden',
+          "transform": 'rotateY(180deg)'
         }
       })
     })
