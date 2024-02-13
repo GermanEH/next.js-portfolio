@@ -3,9 +3,7 @@
 import {useState} from "react"
 import Header from './ui/Header'
 import HeroText from "./ui/HeroText";
-import About from "./ui/About";
-import Projects from "./ui/Projects";
-import Contact from "./ui/Contact";
+import Card from './ui/Card'
 import CardsList from "./ui/CardsList";
 
 export default function Home() {
@@ -37,14 +35,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between py-10">
       <Header/>
-      {isClickedState.isAboutClicked ? <>
-        <About/></> :
-      isClickedState.isProjectsClicked ? <>
-      <Projects/></> :
-      isClickedState.isContactClicked ? <>
-      <Contact/>
-      </> : <></>
-      }
+      <Card isClickedState={isClickedState}/>
       <HeroText/>
       <CardsList handleClickedState={handleClickedState} isClickedState={isClickedState} />
     </main>
