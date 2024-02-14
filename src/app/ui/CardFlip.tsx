@@ -7,14 +7,14 @@ interface CardFlipProps {
 }
 
 const CardFlip: React.FC<CardFlipProps> = ({title, subtitle, isClickedState, handleClickedState, clickedSection}) => {
-console.log(isClickedState)
+
   return (
     <>
                 <div className={`preserve-3d perspective-1000 transform 
           ${(title === 'About me' && isClickedState.isAboutClicked) ? ' transform-about' : 
           (title === 'Projects' && isClickedState.isProjectsClicked) ? 'transform-projects' : 
           (title === 'Contact' && isClickedState.isContactClicked) ? 'transform-contact' : '' } transition-transform duration-700 `}>
-        <a className={`absolute group rounded-lg border border-transparent ${ title === 'About me' ? 'px-5 py-4' : 'pl-5 pr-24 pt-4 pb-8' } transition-colors hover:border-gray-300 hover:bg-gray-100 
+        <div className={`absolute group rounded-lg border border-transparent ${ title === 'About me' ? 'px-5 py-4' : 'pl-5 pr-24 pt-4 pb-8' } transition-colors hover:border-gray-300 hover:bg-gray-100 
           hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 backface-hidden 
           ${(title === 'About me' && isClickedState.isProjectsClicked) ? 'invisible opacity-0' : ''}
           ${(title === 'About me' &&  isClickedState.isContactClicked) ? 'invisible opacity-0' : ''}
@@ -34,7 +34,7 @@ console.log(isClickedState)
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
             {subtitle}
           </p>
-        </a>
+        </div>
         <div className={`absolute overflow-hidden font-mono
            backface-hidden rotate-y-180 rounded-[2px]
            dark:bg-slate-800`} onClick={() => handleClickedState(clickedSection)}>        
