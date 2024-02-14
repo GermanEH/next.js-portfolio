@@ -3,7 +3,7 @@ interface title {
   title_1: string;
   title_2: string
 }
-export default async function HeroText({title_1, title_2}: title) {
+export default function HeroText({title_1, title_2}: title) {
 
   return (
     <>
