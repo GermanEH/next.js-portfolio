@@ -1,7 +1,7 @@
-import {inter} from "@/app/ui/fonts";
+import {inter} from "@/ui/fonts";
 import "./ui/globals.css";
-import Header from './ui/Header'
-import HeroText from "./ui/HeroText";
+import Header from './components/Header'
+import HeroText from "./components/HeroText";
 
 export default function RootLayout({
   children,
