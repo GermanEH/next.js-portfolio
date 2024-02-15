@@ -1,4 +1,22 @@
 {
     "title_1":"Hago",
-    "title_2":"front-end rápido, sólid-o, y performante para una exquisita experiencia de usuario."
+    "title_2":"front-end rápido, sólid-o, y performante para una exquisita experiencia de usuario.",
+    "CV": "Descargar CV",
+    "section_1_title": "Sobre mí",
+    "section_1_subtitle": "Conoce mi experiencia!",
+    "section_1_body_1": "Escribo código hace dos años. Participé en dos pasantías, y trabajé full-time los últimos seis meses.",
+    "section_1_body_2": "En mi trabajo a tiempo completo, he resuelto 40 tickets en el espacio de 90 días, while contribuía con el front-end de un servicio para el mismo cliente. También he liderado dos proyectos por elección libre de los respectivos equipos, ambos con grandes resultados.",
+    "section_1_body_subtitle": "Tecnologías:",
+    "section_1_body_3": "✅ React JS, Typescript, y React Native",
+    "section_1_body_4": "✅ Node y Express JS",
+    "section_1_body_5": "✅ PostgreSQL y Mongo DB",
+    "section_1_body_6": "✅ También algo de experiencia en Vue.js",
+    "section_1_body_7": "Si estás buscando un developer con experiencia en ambientes de trabajo de alta exigencia, soy ideal para unirme a tu equipo.",
+    "section_1_body_8": "Pongámonos en contacto! 🤜🏼 🤛🏼 🚀",
+    "section_2_title": "Proyectos",
+    "section_2_subtitle": "Mira lo que he construido",
+    "section_3_title": "Contacto",
+    "section_3_subtitle": "Conectemos!",
+    "section_3_body_1": "Envía un mensaje"
+
 }
