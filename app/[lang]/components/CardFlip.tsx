@@ -13,18 +13,13 @@ const CardFlip: React.FC<CardFlipProps> = ({title, subtitle, isClickedState, han
 
   return (
     <>
-                <div className={`preserve-3d perspective-1000 transform 
+      <div className={`preserve-3d perspective-1000 transform 
           ${((title === 'About me' || title === 'Sobre mí') && isClickedState.isAboutClicked) ? ' transform-about' : 
           ((title === 'Projects' || title === 'Proyectos') && isClickedState.isProjectsClicked) ? 'transform-projects' : 
           ((title === 'Contact' || title === 'Contacto') && isClickedState.isContactClicked) ? 'transform-contact' : '' } transition-transform duration-700 `}>
         <div className={`absolute group rounded-lg border border-transparent ${ (title === ('About me' || 'Sobre mí')) ? 'px-5 py-4 pb-8' : 'pl-5 pr-24 pt-4 pb-8' } transition-colors hover:border-gray-300 hover:bg-gray-100 
           hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 backface-hidden 
-          ${((title === 'About me' || title === 'Sobre mí') && isClickedState.isProjectsClicked) ? 'invisible opacity-0' : ''}
-          ${((title === 'About me' || title === 'Sobre mí') &&  isClickedState.isContactClicked) ? 'invisible opacity-0' : ''}
-          ${((title === 'Projects' || title === 'Proyectos') &&  isClickedState.isAboutClicked) ? 'invisible opacity-0' : ''}
-          ${((title === 'Projects' || title === 'Proyectos') &&  isClickedState.isContactClicked) ? 'invisible opacity-0' : ''}
-          ${((title === 'Contact' || title === 'Contacto') &&  isClickedState.isAboutClicked) ? 'invisible opacity-0' : ''}
-          ${((title === 'Contact' || title === 'Contacto') &&  isClickedState.isProjectsClicked) ? 'invisible opacity-0' : ''}
+          ${isClickedState.isAboutClicked || isClickedState.isProjectsClicked || isClickedState.isContactClicked ? 'hidden' : 'block'}
           `} onClick={() => handleClickedState(clickedSection)}
           rel="noopener noreferrer"
         >

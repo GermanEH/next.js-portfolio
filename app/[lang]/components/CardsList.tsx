@@ -16,7 +16,7 @@ const CardsList:React.FC<SectionProps> = ({dictionary}) => {
       <CardFlip title={section_1_title} subtitle={section_1_subtitle} isClickedState={isClickedState} handleClickedState={handleClickedState} clickedSection={'isAboutClicked'}/>
       <CardFlip title={section_2_title} subtitle={section_2_subtitle} isClickedState={isClickedState} handleClickedState={handleClickedState} clickedSection={'isProjectsClicked'}/>
       <CardFlip title={section_3_title} subtitle={section_3_subtitle} isClickedState={isClickedState} handleClickedState={handleClickedState} clickedSection={'isContactClicked'}/>
-  </div> 
+    </div> 
     </>
   )
 }

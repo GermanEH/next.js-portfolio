@@ -15,7 +15,7 @@ const Contact:React.FC<SectionProps> = ({dictionary}) => {
   }, []);
   return (
     <>
-      <div className={`absolute lg:max-w-5xl lg:w-full p-4 lg:mt-44 z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000 grid grid-cols-2 items-center`}>
+      <div className={`absolute lg:max-w-5xl lg:w-full p-4 lg:mt-40 z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000 grid grid-cols-2 items-center`}>
         <section className='flex flex-col justify-center items-center'>
           <div className="w-72 h-24 mb-2 flex flex-col justify-center items-center border dark:border-neutral-700 dark:bg-slate-900">
             <img src="/logo.png" height={'50px'} width={'50px'}></img>
@@ -29,14 +29,10 @@ const Contact:React.FC<SectionProps> = ({dictionary}) => {
           <img></img>
             <p>germanhdev@gmail.com</p>
             </div>
-          <div className="w-72 h-24 mb-2 flex flex-col justify-center items-center border dark:border-neutral-700 dark:bg-slate-900">
-          <img></img>
-            <p>Freelancer</p>
-          </div>
         </section>
         <section className='flex flex-col justify-center items-center'>
         <h2 className="text-xl font-bold mb-4">{dictionary?.section_3_body_1}</h2>
-          <form className='flex flex-col justify-center items-center p-4'>
+          <form className='flex flex-col justify-center items-center'>
             <input type="text" placeholder="Email" className='p-2 m-4 rounded text-black' />
             <input type="text" placeholder="Full Name" className='p-2 m-4 rounded text-black'/>
             <input type="text" placeholder="Subject" className='p-2 m-4 rounded text-black'/>

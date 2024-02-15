@@ -42,10 +42,11 @@ const config: Config = {
     plugin(function ({addUtilities}: any){
       addUtilities({
         ".rotate-y-180": {
-          "transform": 'rotateY(180deg) translateY(-80%)'
+          "transform": 'rotateY(180deg) translateY(-75%)'
         },
         ".transform-about": {
-          'transform': 'rotateY(180deg) scaleY(2.3) scaleX(4.5) translateX(-30%) translateY(-50%)',
+          'transform': 'rotateY(180deg) scaleY(2) scaleX(4.5) translateX(-30%) translateY(-50%)',
+          "padding": '0'
           // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
         },
         ".translate": {
@@ -56,11 +57,11 @@ const config: Config = {
           // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
         },
         ".transform-projects": {
-          'transform': 'rotateY(180deg) scaleY(2.3) scaleX(4.5) translateX(-6.5%) translateY(-30%)',
+          'transform': 'rotateY(180deg) scaleY(2) scaleX(4.5) translateX(-6.5%) translateY(-30%)',
           // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
         },
         ".transform-contact": {
-          'transform': 'rotateY(180deg) scaleY(2.3) scaleX(4.5) translateX(16%) translateY(-30%)'
+          'transform': 'rotateY(180deg) scaleY(2) scaleX(4.5) translateX(16%) translateY(-30%)'
           // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
         },
         ".preserve-3d": {
