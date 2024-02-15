@@ -1,10 +1,11 @@
 'use client'
 
 import {useState, useEffect} from 'react'
+import { SectionProps } from './Card'
 
-export default function About() {
+const About:React.FC<SectionProps> = ({dictionary}) => {
   const [isVisible, setIsVisible] = useState(false);
-
+  // const {section_1_body_1, section_1_body_2, section_1_body_3} = dictionary
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsVisible(true);
@@ -15,21 +16,19 @@ export default function About() {
   return (
     <>
       <div className={`absolute lg:max-w-5xl lg:w-full p-4 lg:mt-48 ml-8 z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000`}>
-        <p>Looking for a React/React Native developer with experience in high demand work environment? Look no further! You reached the right place 🤩 
-        With me in your team, you will have an analitic, commited, and strong client-oriented professional 💻💼 </p>
-        <h3>Stack:</h3>
-        <ul>
-          <li>✅ React JS, and React Native</li>
+        <p className='pb-4 px-20'>{dictionary?.section_1_body_1}</p>
+        <p className='pb-4 px-20'>{dictionary?.section_1_body_2}</p>
+        <h3 className='pb-4 px-20'>{dictionary?.section_1_body_subtitle}</h3>
+        <ul className='pb-4 px-20'>
+          <li>✅ React JS, Typescript, and React Native</li>
           <li>✅ Node and Express JS</li>
-          <li>✅ PostgreSQL</li>
-          <li>✅ Mongo DB</li>
+          <li>✅ PostgreSQL and Mongo DB</li>
+          <li>✅ Also some experience in Vue.js</li>
         </ul>
-        <p>When I sat down to write my first lines of code I realized that software is the ideal oportunity to connect my love por creative and logic problem-solving, with my ambition of having a positive and meaningful impact on people's lives.</p>
-        <h3>Main achievments:</h3>
-        <p>During my studies at Henry, I lead the two developments projects by free choice of the respective teams, both with great outcomes.</p>
-        <p>If you are looking for a developer with experience in high demand work enviroments, and with experience in development of IT projects, I am ideal for joining your team.</p>
-        <p>Let's get in touch! 🤜🏼 🤛🏼 🚀</p>
+        <p className='pb-4 px-20'>{dictionary?.section_1_body_7}</p>
+        <p className='pb-4 px-20'>{dictionary?.section_1_body_8}</p>
       </div>
     </>
   );
 }
+export default About
