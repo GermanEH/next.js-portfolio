@@ -1,4 +1,21 @@
 {
     "title_1":"I make",
-    "title_2":"fast, solid, and performant front-end for a delightful user experience."
+    "title_2":"fast, solid, and performant front-end for a delightful user experience.",
+    "CV": "Download CV",
+    "section_1_title": "About me",
+    "section_1_subtitle": "Learn about my experience!",
+    "section_1_body_1": "I've been coding for the last two years. I took part in two internships, and worked full time the last six months.",
+    "section_1_body_2": "In my full time job, I've solved 40 tickets within the span of 90 days, while contributing with the front-end of a service for the same client. I've also lead the two projects by free choice of the respective teams, both with great outcomes.",
+    "section_1_body_subtitle": "Stack:",
+    "section_1_body_3": "✅ React JS, Typescript, and React Native",
+    "section_1_body_4": "✅ Node and Express JS",
+    "section_1_body_5": "✅ PostgreSQL and Mongo DB",
+    "section_1_body_6": "✅ Also some experience in Vue.js",
+    "section_1_body_7": "If you are looking for a developer with experience in high demand work enviroments, I am ideal for joining your team.",
+    "section_1_body_8": "Let's get in touch! 🤜🏼 🤛🏼 🚀",
+    "section_2_title": "Projects",
+    "section_2_subtitle": "See what I've built.",
+    "section_3_title": "Contact",
+    "section_3_subtitle": "Let's connect!",
+    "section_3_body_1": "Send a message"
 }
