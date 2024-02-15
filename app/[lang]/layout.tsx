@@ -15,7 +15,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
     <main className="flex min-h-screen flex-col items-center justify-between py-10">
-        <Header/>
+        <Header CV={dictionary.CV}/>
         <HeroText title_1={dictionary.title_1} title_2={dictionary.title_2}/>
         {children}
     </main>
