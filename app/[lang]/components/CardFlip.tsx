@@ -1,4 +1,4 @@
-import {ClickedState, HandleClickedState} from '../utils/hooks/useClickedState'
+import {ClickedState, HandleClickedState} from '../hooks/useClickedState'
 
 interface CardFlipProps {
   title: string;
