@@ -1,16 +1,14 @@
-'use client'
-
 import Card from './components/Card'
 import CardsList from "./components/CardsList";
-import useClickedState from './hooks/useClickedState'
 
-export default function Home() {
+export default async function Home({params}:{params: {lang :string}}) {
 
-  const { isClickedState, handleClickedState } = useClickedState();
+  const dictionary =  await import(`@/dictionaries/${params.lang}.json`).then(m => m.default)
+
   return (
     <>
-        <Card isClickedState={isClickedState}/>
-        <CardsList handleClickedState={handleClickedState} isClickedState={isClickedState} />
+        <Card dictionary={dictionary}/>
+        <CardsList dictionary={dictionary} />
     </>
   );
 }
