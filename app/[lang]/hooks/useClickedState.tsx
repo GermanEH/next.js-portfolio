@@ -1,12 +1,17 @@
+'use client' 
 import {useState} from "react"
+
+export interface ClickedState {
+  [key: string]: boolean;
+}
+
+export interface HandleClickedState {
+  (itemClicked: keyof ClickedState): void;
+}
 
 const useClickedState = () => {
     
-  interface MyState {
-    [key: string]: boolean;
-  }
-
-  const [isClickedState, setClickedState] = useState<MyState>({
+  const [isClickedState, setClickedState] = useState<ClickedState>({
     isAboutClicked: false,
     isProjectsClicked: false,
     isContactClicked: false
@@ -14,7 +19,7 @@ const useClickedState = () => {
 
   const handleClickedState = (itemClicked: string) => {
     setClickedState(prevState => {
-      const updatedState: MyState = {...prevState}
+      const updatedState: ClickedState = {...prevState}
       for (const key in prevState) {
         if(key === itemClicked) {
           updatedState[key] = !prevState[key]
