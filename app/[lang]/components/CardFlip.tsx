@@ -1,8 +1,11 @@
+import {ClickedState, HandleClickedState} from '../hooks/useClickedState'
+
+
 interface CardFlipProps {
   title: string;
   subtitle: string;
-  isClickedState: any;
-  handleClickedState: any;
+  isClickedState: ClickedState;
+  handleClickedState: HandleClickedState;
   clickedSection: string;
 }
 
