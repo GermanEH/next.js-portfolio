@@ -1,14 +1,15 @@
 'use client'
 
 import {useState, useEffect} from 'react'
+import { SectionProps } from './Card'
 
-export default function Contact({handleClickedState}:any) {
+const Contact:React.FC<SectionProps> = ({dictionary}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsVisible(true);
-    }, 300);
+    }, 380);
 
     return () => clearTimeout(timeoutId);
   }, []);
@@ -34,7 +35,7 @@ export default function Contact({handleClickedState}:any) {
           </div>
         </section>
         <section className='flex flex-col justify-center items-center'>
-        <h2 className="text-xl font-bold mb-4">Send a message</h2>
+        <h2 className="text-xl font-bold mb-4">{dictionary?.section_3_body_1}</h2>
           <form className='flex flex-col justify-center items-center p-4'>
             <input type="text" placeholder="Email" className='p-2 m-4 rounded text-black' />
             <input type="text" placeholder="Full Name" className='p-2 m-4 rounded text-black'/>
@@ -47,3 +48,5 @@ export default function Contact({handleClickedState}:any) {
     </>
   );
 }
+
+export default Contact
