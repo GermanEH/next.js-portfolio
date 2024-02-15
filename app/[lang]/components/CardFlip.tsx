@@ -1,5 +1,5 @@
 import {ClickedState, HandleClickedState} from '../hooks/useClickedState'
-
+import getScreenSize from '../ui/screenSize'
 
 interface CardFlipProps {
   title: string;
@@ -11,15 +11,21 @@ interface CardFlipProps {
 
 const CardFlip: React.FC<CardFlipProps> = ({title, subtitle, isClickedState, handleClickedState, clickedSection}) => {
 
+  const { isAboutClicked, isProjectsClicked, isContactClicked } = isClickedState
   return (
     <>
-      <div className={`preserve-3d perspective-1000 transform 
-          ${((title === 'About me' || title === 'Sobre mí') && isClickedState.isAboutClicked) ? ' transform-about' : 
-          ((title === 'Projects' || title === 'Proyectos') && isClickedState.isProjectsClicked) ? 'transform-projects' : 
-          ((title === 'Contact' || title === 'Contacto') && isClickedState.isContactClicked) ? 'transform-contact' : '' } transition-transform duration-700 `}>
-        <div className={`absolute group rounded-lg border border-transparent ${ (title === ('About me' || 'Sobre mí')) ? 'px-5 py-4 pb-8' : 'pl-5 pr-24 pt-4 pb-8' } transition-colors hover:border-gray-300 hover:bg-gray-100 
+      <div className={`preserve-3d perspective-1000 transform mt-20
+          ${((title === 'About me' || title === 'Sobre mí') && isAboutClicked) ? ' transform-about' : 
+          ((title === 'Projects' || title === 'Proyectos') && isProjectsClicked) ? 'transform-projects' : 
+          ((title === 'Contact' || title === 'Contacto') && isContactClicked) ? 'transform-contact' : '' } transition-transform duration-700 `}>
+        <div className={`absolute group rounded-lg border border-transparent
+        ${ (title === ('About me' || 'Sobre mí')) ? 'px-5' : 'pl-5 pr-24' } 
+        ${ (isAboutClicked || isProjectsClicked || isContactClicked) ? 'py-0 pb-0 pt-0' : (title === ('About me' || 'Sobre mí')) ? 'py-4 pb-8' : 'pb-8 pt-4' }
+        transition-colors hover:border-gray-300 hover:bg-gray-100 
           hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 backface-hidden 
-          ${isClickedState.isAboutClicked || isClickedState.isProjectsClicked || isClickedState.isContactClicked ? 'hidden' : 'block'}
+          ${((title === 'About me' || title === 'Sobre mí') && (isProjectsClicked || isContactClicked)) ? 'hidden' : ''}
+          ${((title === 'Projects' || title === 'Proyectos') &&  (isAboutClicked || isContactClicked)) ? 'hidden' : ''}
+          ${((title === 'Contact' || title === 'Contacto') &&  (isAboutClicked || isProjectsClicked)) ? 'hidden' : ''}
           `} onClick={() => handleClickedState(clickedSection)}
           rel="noopener noreferrer"
         >

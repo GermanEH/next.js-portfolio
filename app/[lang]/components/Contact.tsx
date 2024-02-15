@@ -15,6 +15,7 @@ const Contact:React.FC<SectionProps> = ({dictionary}) => {
   }, []);
   return (
     <>
+    {isVisible  && 
       <div className={`absolute lg:max-w-5xl lg:w-full p-4 lg:mt-40 z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000 grid grid-cols-2 items-center`}>
         <section className='flex flex-col justify-center items-center'>
           <div className="w-72 h-24 mb-2 flex flex-col justify-center items-center border dark:border-neutral-700 dark:bg-slate-900">
@@ -41,6 +42,7 @@ const Contact:React.FC<SectionProps> = ({dictionary}) => {
           </form>
         </section>
       </div>
+    }
     </>
   );
 }
