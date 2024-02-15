@@ -2,8 +2,9 @@
 
 import {useState, useEffect} from 'react'
 import Image from "next/image";
+import { SectionProps } from './Card'
 
-export default function Projects() {
+const Projects:React.FC<SectionProps> = ({dictionary}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -38,3 +39,5 @@ export default function Projects() {
     </>
   );
 }
+
+export default Projects
