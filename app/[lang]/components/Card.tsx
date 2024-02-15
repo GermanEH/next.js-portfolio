@@ -3,20 +3,24 @@
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
-
-interface CardProps {
-  isClickedState: any;
+import {ClickedState} from '../hooks/useClickedState'
+export interface LangJSON {
+  [key: string]: string;
 }
+export interface SectionProps {
+  isClickedState?: ClickedState
+  dictionary: LangJSON
+}
+const CardsContent : React.FC<SectionProps> = ({isClickedState, dictionary}) => {
 
-const CardsContent : React.FC<CardProps> = ({isClickedState}) => {
   return (
     <>
-    {isClickedState.isAboutClicked ? <>
-        <About/></> :
-      isClickedState.isProjectsClicked ? <>
-      <Projects/></> :
-      isClickedState.isContactClicked ? <>
-      <Contact/>
+    {isClickedState?.isAboutClicked ? <>
+        <About dictionary={dictionary}/></> :
+      isClickedState?.isProjectsClicked ? <>
+        <Projects dictionary={dictionary}/></> :
+      isClickedState?.isContactClicked ? <>
+        <Contact dictionary={dictionary}/>
       </> : <></>
       }
     </>
