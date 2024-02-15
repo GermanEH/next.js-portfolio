@@ -11,17 +11,17 @@ const CardFlip: React.FC<CardFlipProps> = ({title, subtitle, isClickedState, han
   return (
     <>
                 <div className={`preserve-3d perspective-1000 transform 
-          ${(title === 'About me' && isClickedState.isAboutClicked) ? ' transform-about' : 
-          (title === 'Projects' && isClickedState.isProjectsClicked) ? 'transform-projects' : 
-          (title === 'Contact' && isClickedState.isContactClicked) ? 'transform-contact' : '' } transition-transform duration-700 `}>
-        <div className={`absolute group rounded-lg border border-transparent ${ title === 'About me' ? 'px-5 py-4' : 'pl-5 pr-24 pt-4 pb-8' } transition-colors hover:border-gray-300 hover:bg-gray-100 
+          ${((title === 'About me' || title === 'Sobre mí') && isClickedState.isAboutClicked) ? ' transform-about' : 
+          ((title === 'Projects' || title === 'Proyectos') && isClickedState.isProjectsClicked) ? 'transform-projects' : 
+          ((title === 'Contact' || title === 'Contacto') && isClickedState.isContactClicked) ? 'transform-contact' : '' } transition-transform duration-700 `}>
+        <div className={`absolute group rounded-lg border border-transparent ${ (title === ('About me' || 'Sobre mí')) ? 'px-5 py-4' : 'pl-5 pr-24 pt-4 pb-8' } transition-colors hover:border-gray-300 hover:bg-gray-100 
           hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 backface-hidden 
-          ${(title === 'About me' && isClickedState.isProjectsClicked) ? 'invisible opacity-0' : ''}
-          ${(title === 'About me' &&  isClickedState.isContactClicked) ? 'invisible opacity-0' : ''}
-          ${(title === 'Projects' &&  isClickedState.isAboutClicked) ? 'invisible opacity-0' : ''}
-          ${(title === 'Projects' &&  isClickedState.isContactClicked) ? 'invisible opacity-0' : ''}
-          ${(title === 'Contact' &&  isClickedState.isAboutClicked) ? 'invisible opacity-0' : ''}
-          ${(title === 'Contact' &&  isClickedState.isProjectsClicked) ? 'invisible opacity-0' : ''}
+          ${((title === 'About me' || title === 'Sobre mí') && isClickedState.isProjectsClicked) ? 'invisible opacity-0' : ''}
+          ${((title === 'About me' || title === 'Sobre mí') &&  isClickedState.isContactClicked) ? 'invisible opacity-0' : ''}
+          ${((title === 'Projects' || title === 'Proyectos') &&  isClickedState.isAboutClicked) ? 'invisible opacity-0' : ''}
+          ${((title === 'Projects' || title === 'Proyectos') &&  isClickedState.isContactClicked) ? 'invisible opacity-0' : ''}
+          ${((title === 'Contact' || title === 'Contacto') &&  isClickedState.isAboutClicked) ? 'invisible opacity-0' : ''}
+          ${((title === 'Contact' || title === 'Contacto') &&  isClickedState.isProjectsClicked) ? 'invisible opacity-0' : ''}
           `} onClick={() => handleClickedState(clickedSection)}
           rel="noopener noreferrer"
         >
