@@ -1,6 +1,8 @@
 import Image from "next/image";
-
-const Header = () => {
+interface CV {
+  CV: string
+}
+const Header = ({CV}:CV) => {
   return (
     <>
            <div className="max-w-5xl w-full flex justify-between items-center pb-20">
@@ -23,7 +25,7 @@ const Header = () => {
         href="/CV Germán Horianski (english).pdf" 
         target="_blank" 
         className="text-lg font-semibold" 
-        rel="noopener noreferrer"><h2>Download CV</h2>
+        rel="noopener noreferrer"><h2>{CV}</h2>
         </a>
       </div>
     </div>
