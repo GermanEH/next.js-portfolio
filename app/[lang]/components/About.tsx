@@ -15,18 +15,18 @@ const About:React.FC<SectionProps> = ({dictionary}) => {
   return (
     <>
     {isVisible && 
-      <div className={`absolute lg:max-w-5xl lg:w-full p-4 lg:mt-40 ml-8 z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000`}>
-        <p className='pb-4 px-20'>{dictionary?.section_1_body_1}</p>
-        <p className='pb-4 px-20'>{dictionary?.section_1_body_2}</p>
-        <h3 className='pb-4 px-20'>{dictionary?.section_1_body_subtitle}</h3>
-        <ul className='pb-4 px-20'>
+      <div className={`absolute lg:max-w-5xl lg:w-full p-4 mt-48 lg:mt-40 ml-8 z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000`}>
+        <p className='pb-4 lg:px-20'>{dictionary?.section_1_body_1}</p>
+        <p className='pb-4 lg:px-20'>{dictionary?.section_1_body_2}</p>
+        <h3 className='pb-4 lg:px-20'>{dictionary?.section_1_body_subtitle}</h3>
+        <ul className='pb-4 lg:px-20'>
           <li>✅ React JS, Typescript, and React Native</li>
           <li>✅ Node and Express JS</li>
           <li>✅ PostgreSQL and Mongo DB</li>
           <li>✅ Also some experience in Vue.js</li>
         </ul>
-        <p className='pb-4 px-20'>{dictionary?.section_1_body_7}</p>
-        <p className='pb-4 px-20'>{dictionary?.section_1_body_8}</p>
+        <p className='pb-4 lg:px-20'>{dictionary?.section_1_body_7}</p>
+        <p className='pb-4 lg:px-20'>{dictionary?.section_1_body_8}</p>
       </div>
     }
     </>

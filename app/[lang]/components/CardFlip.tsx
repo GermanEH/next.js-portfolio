@@ -1,4 +1,4 @@
-import {ClickedState, HandleClickedState} from '../hooks/useClickedState'
+import {ClickedState, HandleClickedState} from '../utils/hooks/useClickedState'
 
 interface CardFlipProps {
   title: string;
@@ -14,9 +14,9 @@ const CardFlip: React.FC<CardFlipProps> = ({title, subtitle, isClickedState, han
   return (
     <>
       <div className={`preserve-3d perspective-1000 transform mt-20
-          ${((title === 'About me' || title === 'Sobre mí') && isAboutClicked) ? ' transform-about' : 
-          ((title === 'Projects' || title === 'Proyectos') && isProjectsClicked) ? 'transform-projects' : 
-          ((title === 'Contact' || title === 'Contacto') && isContactClicked) ? 'transform-contact' : '' } transition-transform duration-700 `}>
+          ${((title === 'About me' || title === 'Sobre mí') && isAboutClicked) ? ' transform-about lg:transform-about-lg' : 
+          ((title === 'Projects' || title === 'Proyectos') && isProjectsClicked) ? 'transform-projects lg:transform-projects-lg' : 
+          ((title === 'Contact' || title === 'Contacto') && isContactClicked) ? 'transform-contact lg:transform-contact-lg' : '' } transition-transform duration-700 `}>
         <div className={`absolute group rounded-lg border border-transparent
         ${ (title === ('About me' || 'Sobre mí')) ? 'px-5' : 'pl-5 pr-24' } 
         ${ (isAboutClicked || isProjectsClicked || isContactClicked) ? 'py-0 pb-0 pt-0' : (title === ('About me' || 'Sobre mí')) ? 'py-4 pb-8' : 'pb-8 pt-4' }
@@ -39,7 +39,10 @@ const CardFlip: React.FC<CardFlipProps> = ({title, subtitle, isClickedState, han
           </p>
         </div>
         <div className={`absolute overflow-hidden font-mono
-           backface-hidden rotate-y-180 rounded-[2px]
+           backface-hidden ${
+              (title === 'About me' || title === 'Sobre mí') ? 'rotate-y-180-about' : 
+              (title === 'Projects' || title === 'Proyectos') ? 'rotate-y-180-projects' : 
+              (title === 'Contact' || title === 'Contacto') ? 'rotate-y-180-contact' : ''}  lg:rotate-y-180 rounded-[2px]
            dark:bg-slate-800`} onClick={() => handleClickedState(clickedSection)}>        
               <h2 className="text-4xl no-transform-about">
               &larr;

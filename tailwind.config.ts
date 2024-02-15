@@ -44,25 +44,40 @@ const config: Config = {
         ".rotate-y-180": {
           "transform": 'rotateY(180deg) translateY(-75%)'
         },
-        ".transform-about": {
-          'transform': 'rotateY(180deg) scaleY(2) scaleX(4.5) translateX(-30%) translateY(-50%)',
-
-          // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
-        },
         ".translate": {
           'transform': 'translateY(-50%)'
         },
+        ".rotate-y-180-about": {
+          'transform': 'rotateY(180deg) translateY(-70%)'
+        },
+        ".rotate-y-180-projects": {
+          'transform': 'rotateY(180deg) translateY(-70%)'
+        },
+        ".rotate-y-180-contact": {
+          'transform': 'rotateY(180deg)translateY(-80%)'
+        },
         ".no-transform-about": {
           'transform': 'scaleY(0.43) scaleX(0.22)'
-          // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
+        },
+        ".transform-about": {
+          'transform': 'rotateY(180deg) scaleY(3.5) scaleX(1.8) translateX(5%)',
+
         },
         ".transform-projects": {
-          'transform': 'rotateY(180deg) scaleY(2) scaleX(4.5) translateX(-6.5%) translateY(-30%)',
-          // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
+          'transform': 'rotateY(180deg) scaleY(4) scaleX(1.8) translateX(5%)',
         },
         ".transform-contact": {
+          'transform': 'rotateY(180deg) scaleY(4) scaleX(1.8) translateX(5%)'
+        },
+        ".transform-about-lg": {
+          'transform': 'rotateY(180deg) scaleY(2) scaleX(4.5) translateX(-30%) translateY(-50%)',
+
+        },
+        ".transform-projects-lg": {
+          'transform': 'rotateY(180deg) scaleY(2) scaleX(4.5) translateX(-6.5%) translateY(-30%)',
+        },
+        ".transform-contact-lg": {
           'transform': 'rotateY(180deg) scaleY(2) scaleX(4.5) translateX(16%) translateY(-30%)'
-          // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
         },
         ".preserve-3d": {
           'transformStyle': 'preserve-3d'
