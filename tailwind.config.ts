@@ -46,7 +46,7 @@ const config: Config = {
         },
         ".transform-about": {
           'transform': 'rotateY(180deg) scaleY(2) scaleX(4.5) translateX(-30%) translateY(-50%)',
-          "padding": '0'
+
           // 'transform': 'rotateY(180deg) scale(5) translateX(160%) translateY(-150%)'
         },
         ".translate": {

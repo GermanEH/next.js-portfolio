@@ -1,5 +1,4 @@
 import {ClickedState, HandleClickedState} from '../hooks/useClickedState'
-import getScreenSize from '../ui/screenSize'
 
 interface CardFlipProps {
   title: string;
