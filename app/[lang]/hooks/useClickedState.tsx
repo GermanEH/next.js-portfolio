@@ -6,7 +6,7 @@ export interface ClickedState {
 }
 
 export interface HandleClickedState {
-  (itemClicked: keyof ClickedState): void;
+  (itemClicked: string): void;
 }
 
 const useClickedState = () => {
