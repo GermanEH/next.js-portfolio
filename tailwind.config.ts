@@ -42,7 +42,7 @@ const config: Config = {
     plugin(function ({addUtilities}: any){
       addUtilities({
         ".rotate-y-180": {
-          "transform": 'rotateY(180deg) translateY(-75%)'
+          "transform": 'rotateY(180deg) translateY(-28vh)'
         },
         ".translate": {
           'transform': 'translateY(-50%)'
