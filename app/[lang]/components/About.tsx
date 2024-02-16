@@ -15,7 +15,7 @@ const About:React.FC<SectionProps> = ({dictionary}) => {
   return (
     <>
     {isVisible && 
-      <div className={`absolute lg:max-w-5xl lg:w-full p-4 mt-48 lg:mt-40 ml-8 z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000`}>
+      <div className={`absolute lg:max-w-5xl lg:w-full p-4 mt-16 sm:mt-[20vh] md:mt-[24vh] lg:mt-[28vh] xl:mt-[32vh] 2xl:mt-[34vh] ml-8 z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000`}>
         <p className='pb-4 lg:px-20'>{dictionary?.section_1_body_1}</p>
         <p className='pb-4 lg:px-20'>{dictionary?.section_1_body_2}</p>
         <h3 className='pb-4 lg:px-20'>{dictionary?.section_1_body_subtitle}</h3>
