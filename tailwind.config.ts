@@ -22,7 +22,7 @@ const config: Config = {
         'mobile-hd':'720px',
         'mobile-full-hd':'1080px',
         'mobile-qhd':'1125px',
-        'desktop-hd':'1366px',
+        'desktop-hd':'1360px',
         'desktop-full-hd':'1920px'
       },
       spacing: {
