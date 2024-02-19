@@ -108,17 +108,17 @@ const config: Config = {
           'transform': 'scaleY(0.28) scaleX(0.22)'
         },
         ".transform-about-xl": {
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.5) translateX(-25%) translateY(-16.5vh) ',
+          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.8) translateX(-9vh) translateY(-16.5vh) ',
 
         },
         ".transform-desktop-hd":{
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.5) translateX(-25%) translateY(-16.5vh) ',
+          
         },
         ".transform-about-2xl": {
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4) translateX(-50%) translateY(-20vh)',
+          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.2) translateX(-5.6vw) translateY(-20vh)',
         },
         ".transform-desktop-full-hd":{
-
+          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(3.4) translateX(-7.2vw) translateY(-19.5vh)',
         },
         ".preserve-3d": {
           'transformStyle': 'preserve-3d'
