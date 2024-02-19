@@ -1,7 +1,7 @@
 'use client'
 
 import CardFlip from "./CardFlip";
-import useClickedState from '../hooks/useClickedState'
+import useClickedState from '../utils/hooks/useClickedState'
 import { SectionProps } from "./Card";
 import Card from './Card'
 

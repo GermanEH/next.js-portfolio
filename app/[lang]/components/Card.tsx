@@ -3,7 +3,7 @@
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import {ClickedState} from '../hooks/useClickedState'
+import {ClickedState} from '../utils/hooks/useClickedState'
 export interface LangJSON {
   [key: string]: string;
 }

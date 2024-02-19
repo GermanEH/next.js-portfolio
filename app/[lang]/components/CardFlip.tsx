@@ -1,5 +1,5 @@
-import {ClickedState, HandleClickedState} from '../hooks/useClickedState'
-import getTransformationClasses from '../getTransformationClasses'
+import {ClickedState, HandleClickedState} from '../utils/hooks/useClickedState'
+import getTransformationClasses from '../utils/getTransformationClasses'
 
 interface CardFlipProps {
   title: string;
