@@ -16,7 +16,7 @@ const Contact:React.FC<SectionProps> = ({dictionary}) => {
   return (
     <>
     {isVisible  && 
-      <div className={`absolute lg:max-w-5xl lg:w-full ml-20 lg:ml-0 p-4 mt-[28vh] mobile-s:mt-[40vh] sm:mt-[20vh] mobile-hd:mt-[50vh] md:mt-[56vh] lg:mt-[34vh] desktop-hd:mt-[32] xl:mt-[28vh] desktop-full-hd:mt-[34vh] z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000 items-center lg:grid lg:grid-cols-2 items-center`}>
+      <div className={`absolute lg:max-w-5xl lg:w-full ml-20 lg:ml-0 p-4 mt-[28vh] mobile-s:mt-[40vh] sm:mt-[20vh] mobile-hd:mt-[50vh] md:mt-[56vh] lg:mt-[34vh] desktop-hd:mt-[26vh] xl:mt-[28vh] desktop-full-hd:mt-[34vh] z-20 transition-opacity opacity-${isVisible ? '100' : '0'} duration-1000 items-center lg:grid lg:grid-cols-2 items-center`}>
         <section className='flex flex-col justify-center items-center'>
           <div className="w-72 h-24 mb-2 flex flex-col justify-center items-center border dark:border-neutral-700 dark:bg-slate-900">
             <img src="/logo.png" height={'50px'} width={'50px'}></img>
