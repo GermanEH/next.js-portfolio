@@ -110,10 +110,10 @@ const config: Config = {
           'transform': 'rotateY(180deg) scaleY(3.8) scaleX(4.8) translateX(-4.5vw) translateY(-15vh) ',
         },
         ".transform-about-2xl": {
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.2) translateX(-5.6vw) translateY(-20vh)',
+          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.2) translateX(-5.6vw) translateY(-18vh)',
         },
         ".transform-about-desktop-full-hd":{
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(3.4) translateX(-7.2vw) translateY(-19.5vh)',
+          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(3.4) translateX(-7.2vw) translateY(-18vh)',
         },
         ".transform-projects-mobile-s": {
           'transform': 'rotateY(180deg) scaleY(3.2) scaleX(1.5) translateX(18.5vw) translateY(-4vh)',
@@ -149,10 +149,10 @@ const config: Config = {
           'transform': 'rotateY(180deg) scaleY(3.8) scaleX(4.7) translateX(-0.7vw) translateY(-15vh) ',
         },
         ".transform-projects-2xl": {
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.2) translateX(-1.6vw) translateY(-20vh)',
+          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.2) translateX(-1.6vw) translateY(-18vh)',
         },
         ".transform-projects-desktop-full-hd":{
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(3.4) translateX(-3.2vw) translateY(-19.5vh)',
+          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(3.4) translateX(-3.2vw) translateY(-18vh)',
         },
         ".transform-contact-mobile-s": {
           'transform': 'rotateY(180deg) scaleY(3.2) scaleX(1.7) translateX(21vw) translateY(-4vh)',
@@ -188,10 +188,10 @@ const config: Config = {
           'transform': 'rotateY(180deg) scaleY(3.8) scaleX(4.7) translateX(3.3vw) translateY(-15vh) ',
         },
         ".transform-contact-2xl": {
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.2) translateX(2.2vw) translateY(-20vh)',
+          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.2) translateX(2.2vw) translateY(-18vh)',
         },
         ".transform-contact-desktop-full-hd":{
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(3.4) translateX(0.5vw) translateY(-19.5vh)',
+          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(3.4) translateX(0.5vw) translateY(-18vh)',
         },
         ".preserve-3d": {
           'transformStyle': 'preserve-3d'
