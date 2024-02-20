@@ -5,7 +5,7 @@ interface CV {
 const Header = ({CV}:CV) => {
   return (
     <>
-      <div className="max-w-5xl w-full flex justify-between items-center px-4 sm:px-20 lg:px-0 pb-20">
+      <div className="max-w-5xl w-full flex justify-between items-center px-4 sm:px-20 lg:px-0 pb-20 lg:max-xl:px-[10vw]">
       <div className="flex place-items-center 
       before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial 
       before:from-white before:to-transparent before:blur-2xl before:content-[''] 
