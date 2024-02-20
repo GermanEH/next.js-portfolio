@@ -77,10 +77,10 @@ const config: Config = {
         },
 
         ".transform-about-mobile-s": {
-          'transform': 'rotateY(180deg) scaleY(3.2) scaleX(1.5) translateX(18.5vw) translateY(6vh)',
+          'transform': 'rotateY(180deg) scaleY(2.8) scaleX(1.5) translateX(18.5vw) translateY(4vh)',
         },
         ".transform-about-mobile-m": {
-          'transform': 'rotateY(180deg) scaleY(2.8) scaleX(1.8) translateX(23vw) translateY(9vh)',
+          'transform': 'rotateY(180deg) scaleY(2.8) scaleX(1.75) translateX(23vw) translateY(12vh)',
         },
         ".transform-about-mobile-l": {
           'transform': 'rotateY(180deg) scaleY(2.5) scaleX(2) translateX(26vw) translateY(8vh)',
@@ -116,10 +116,10 @@ const config: Config = {
           'transform': 'rotateY(180deg) scaleY(3.6) scaleX(3.4) translateX(-7.2vw) translateY(-18vh)',
         },
         ".transform-projects-mobile-s": {
-          'transform': 'rotateY(180deg) scaleY(3.2) scaleX(1.5) translateX(18.5vw) translateY(-4vh)',
+          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(1.5) translateX(18.5vw) translateY(-12vh)',
         },
         ".transform-projects-mobile-m": {
-          'transform': 'rotateY(180deg) scaleY(3.2) scaleX(1.8) translateX(23vw) translateY(3.4vh)',
+          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(1.7) translateX(23.5vw) translateY(-3vh)',
         },
         ".transform-projects-mobile-l": {
           'transform': 'rotateY(180deg) scaleY(3.4) scaleX(2) translateX(26vw) translateY(7.5vh)',
@@ -155,10 +155,10 @@ const config: Config = {
           'transform': 'rotateY(180deg) scaleY(3.6) scaleX(3.4) translateX(-3.2vw) translateY(-18vh)',
         },
         ".transform-contact-mobile-s": {
-          'transform': 'rotateY(180deg) scaleY(3.2) scaleX(1.7) translateX(21vw) translateY(-4vh)',
+          'transform': 'rotateY(180deg) scaleY(2.8) scaleX(1.7) translateX(22vw) translateY(-10vh)',
         },
         ".transform-contact-mobile-m": {
-          'transform': 'rotateY(180deg) scaleY(3.2) scaleX(2) translateX(26vw) translateY(4vh)',
+          'transform': 'rotateY(180deg) scaleY(2.8) scaleX(1.9) translateX(26vw) translateY(-1vh)',
         },
         ".transform-contact-mobile-l": {
           'transform': 'rotateY(180deg) scaleY(3.3) scaleX(2.2) translateX(28.5vw) translateY(7vh)',
