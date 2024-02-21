@@ -27,7 +27,9 @@ const Contact:React.FC<SectionProps> = ({dictionary}) => {
             text: 'Email sent successfully',
             icon: 'success'
           })
-      form.current?.reset()
+      if (typeof form.current !== 'string' && form.current !== null) {
+        form.current.reset();
+      }
       
     } catch (error: any) {
       console.log(error)
