@@ -19,7 +19,8 @@ const Contact:React.FC<SectionProps> = ({dictionary}) => {
   const sendEmail = async (e: React.FormEvent) => {
     try {
       e.preventDefault()
-      await emailjs.sendForm(process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID as string, process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID as string, form.current, {
+      if ( form.current !== null) {
+      await emailjs.sendForm(process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID as string, process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID as string, form.current as string | HTMLFormElement, {
         publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY as string,
       })
       Swal.fire({
@@ -27,7 +28,6 @@ const Contact:React.FC<SectionProps> = ({dictionary}) => {
             text: 'Email sent successfully',
             icon: 'success'
           })
-      if ( form.current !== null) {
         form.current.reset();
       }
       
