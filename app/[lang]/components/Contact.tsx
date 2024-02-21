@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 const Contact:React.FC<SectionProps> = ({dictionary}) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const form = useRef<string | HTMLFormElement>('');
+  const form = useRef< HTMLFormElement | null>(null);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -27,7 +27,7 @@ const Contact:React.FC<SectionProps> = ({dictionary}) => {
             text: 'Email sent successfully',
             icon: 'success'
           })
-      if (typeof form.current !== 'string' && form.current !== null) {
+      if ( form.current !== null) {
         form.current.reset();
       }
       
