@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 const Contact:React.FC<SectionProps> = ({dictionary}) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const form = useRef<HTMLFormElement>(null);
+  const form = useRef<string | HTMLFormElement>();
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
