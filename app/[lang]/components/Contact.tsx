@@ -1,10 +1,14 @@
 'use client'
 
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import { SectionProps } from './Card'
+import emailjs from '@emailjs/browser'
+import Swal from 'sweetalert2'
 
 const Contact:React.FC<SectionProps> = ({dictionary}) => {
   const [isVisible, setIsVisible] = useState(false);
+
+  const form = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -13,6 +17,30 @@ const Contact:React.FC<SectionProps> = ({dictionary}) => {
 
     return () => clearTimeout(timeoutId);
   }, []);
+
+  const sendEmail = async (e: React.FormEvent) => {
+    try {
+      e.preventDefault()
+      await emailjs.sendForm(process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID, form.current, {
+        publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY,
+      })
+      Swal.fire({
+            title: 'Good job!',
+            text: 'Email sent successfully',
+            icon: 'success'
+          })
+      form.current?.reset()
+      
+    } catch (error: any) {
+      console.log(error)
+      Swal.fire({
+        title: 'Ops!',
+        text:`Error: ${error}`,
+        icon: 'error'
+      })
+    }
+
+  }
   return (
     <>
     {isVisible  && 
@@ -43,11 +71,10 @@ const Contact:React.FC<SectionProps> = ({dictionary}) => {
         </section>
         <section className='flex flex-col justify-center items-center'>
         <h2 className="text-xl font-bold mt-16 mobile-s:mt-8 sm:mt-[10vh] lg:mt-0 mb-4">{dictionary?.section_3_body_1}</h2>
-          <form className='flex flex-col justify-center items-center'>
-            <input type="text" placeholder="Email" className='p-2 m-4 rounded text-black' />
-            <input type="text" placeholder="Full Name" className='p-2 m-4 rounded text-black'/>
-            <input type="text" placeholder="Subject" className='p-2 m-4 rounded text-black'/>
-            <input type="text" placeholder="Message" className='p-2 m-4 rounded text-black'/>
+          <form className='flex flex-col justify-center items-center' ref={form} onSubmit={sendEmail}>
+            <input type="text" placeholder="Email" className='p-2 m-4 rounded text-black' name='user_email'/>
+            <input type="text" placeholder="Full Name" className='p-2 m-4 rounded text-black' name='user_name'/>
+            <textarea placeholder="Message" className='h-[20vh] w-[25vw] p-2 m-4 rounded text-black' name='message'/>
             <button type="submit" className="mt-4 pt-2 pb-2 pl-8 pr-8 rounded-lg border dark:border-neutral-700 dark:bg-slate-900">Send</button>
           </form>
         </section>
