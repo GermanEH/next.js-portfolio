@@ -29,7 +29,10 @@ const Header = ({CV}:CV) => {
         href="/CV Germán Horianski (english).pdf" 
         target="_blank" 
         className="text-lg font-semibold text-center" 
-        rel="noopener noreferrer"><h2 className="">{CV}</h2>
+        rel="noopener noreferrer">
+          <h2>
+            {CV}
+          </h2>
         </a>
       </div>
     </div>

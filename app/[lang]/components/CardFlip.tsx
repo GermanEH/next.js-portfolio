@@ -17,7 +17,7 @@ const CardFlip: React.FC<CardFlipProps> = ({title, subtitle, isClickedState, han
       <div className={`preserve-3d perspective-1000 transform mt-20
           ${getTransformationClasses(title, isAboutClicked, isProjectsClicked, isContactClicked)} transition-transform duration-700 `}>
         <div className={`absolute group rounded-lg border border-transparent
-        ${ (title === ('About me' || 'Sobre mí')) ? 'px-5' : 'pl-5 pr-24' } 
+        ${ (title === ('About me' || 'Sobre mí')) ? 'px-5' : 'pl-5 pr-20' } 
         ${ (isAboutClicked || isProjectsClicked || isContactClicked) ? 'py-0 pb-0 pt-0' : (title === ('About me' || 'Sobre mí')) ? 'py-4 pb-8' : 'pb-8 pt-4' }
         transition-colors hover:border-gray-300 hover:bg-gray-100 
           hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 backface-hidden 
@@ -43,7 +43,7 @@ const CardFlip: React.FC<CardFlipProps> = ({title, subtitle, isClickedState, han
               (title === 'Projects' || title === 'Proyectos') ? 'rotate-y-180-projects' : 
               (title === 'Contact' || title === 'Contacto') ? 'rotate-y-180-contact' : ''}  lg:rotate-y-180 rounded-[2px]
            dark:bg-slate-800`} onClick={() => handleClickedState(clickedSection)}>        
-              <h2 className="text-4xl no-transform-about xl:relative xl:bottom-1">
+              <h2 className="text-4xl no-transform-about sm:relative sm:bottom-2 xl:relative xl:bottom-1">
               &larr;
                {"  " + title }
               </h2>
