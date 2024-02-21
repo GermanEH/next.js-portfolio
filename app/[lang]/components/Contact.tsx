@@ -19,8 +19,8 @@ const Contact:React.FC<SectionProps> = ({dictionary}) => {
   const sendEmail = async (e: React.FormEvent) => {
     try {
       e.preventDefault()
-      await emailjs.sendForm(process.env?.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID, process.env?.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID, form.current, {
-        publicKey: process.env?.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY,
+      await emailjs.sendForm(process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID as string, process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID as string, form.current, {
+        publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY as string,
       })
       Swal.fire({
             title: 'Good job!',
