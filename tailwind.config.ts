@@ -77,25 +77,25 @@ const config: Config = {
         },
 
         ".transform-about-mobile-s": {
-          'transform': 'rotateY(180deg) scaleY(2.8) scaleX(1.5) translateX(18.5vw) translateY(4vh)',
+          'transform': 'rotateY(180deg) scaleY(2.8) scaleX(1.4) translateX(18.5vw) translateY(8vh)',
         },
         ".transform-about-mobile-m": {
-          'transform': 'rotateY(180deg) scaleY(2.8) scaleX(1.75) translateX(23vw) translateY(12vh)',
+          'transform': 'rotateY(180deg) scaleY(2.7) scaleX(1.5) translateX(19vw) translateY(16vh)',
         },
         ".transform-about-mobile-l": {
-          'transform': 'rotateY(180deg) scaleY(2.5) scaleX(2) translateX(26vw) translateY(8vh)',
+          'transform': 'rotateY(180deg) scaleY(2.4) scaleX(1.6) translateX(17vw) translateY(12vh)',
         },
         ".transform-about-sm": {
-          'transform': 'rotateY(180deg) scaleY(6) scaleX(3) translateX(34.6vw) translateY(4vh)',
+          'transform': 'rotateY(180deg) scaleY(6) scaleX(2.5) translateX(24vw) translateY(7vh)',
         },
         ".transform-about-mobile-hd": {
-          'transform': 'rotateY(180deg) scaleY(5.5) scaleX(3) translateX(36vw) translateY(3.5vh)',
+          'transform': 'rotateY(180deg) scaleY(5) scaleX(2.8) translateX(26vw) translateY(5vh)',
         },
         ".transform-about-md": {
-          'transform': 'rotateY(180deg) scaleY(6) scaleX(3.2) translateX(37vw) translateY(5vh)',
+          'transform': 'rotateY(180deg) scaleY(5) scaleX(3.1) translateX(27vw) translateY(6vh)',
         },
         ".transform-about-lg": {
-          'transform': 'rotateY(180deg) scaleY(5) scaleX(4.2) translateX(-4.2vw) translateY(-17vh)',
+          'transform': 'rotateY(180deg) scaleY(4.2) scaleX(4.1) translateX(-5.7vw) translateY(-16vh)',
         },
         ".transform-about-mobile-full-hd":{
           'transform': 'rotateY(180deg) scaleY(4.2) scaleX(5.1) translateX(-4.3vw) translateY(-15vh)',
@@ -104,37 +104,37 @@ const config: Config = {
           'transform': 'scaleY(0.28) scaleX(0.22)'
         },
         ".transform-about-xl": {
-          'transform': 'rotateY(180deg) scaleY(3.8) scaleX(5) translateX(-4vw) translateY(-17vh) ',
+          'transform': 'rotateY(180deg) scaleY(3.8) scaleX(5) translateX(-4vw) translateY(-15vh) ',
         },
         ".transform-about-desktop-hd": {
           'transform': 'rotateY(180deg) scaleY(3.8) scaleX(4.8) translateX(-4.5vw) translateY(-15vh) ',
         },
         ".transform-about-2xl": {
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.2) translateX(-5.6vw) translateY(-18vh)',
+          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(4.2) translateX(-5.6vw) translateY(-22vh)',
         },
         ".transform-about-desktop-full-hd":{
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(3.4) translateX(-7.2vw) translateY(-18vh)',
+          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(3.4) translateX(-7.2vw) translateY(-22vh)',
         },
         ".transform-projects-mobile-s": {
-          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(1.5) translateX(18.5vw) translateY(-12vh)',
+          'transform': 'rotateY(180deg) scaleY(2.7) scaleX(1.4) translateX(18.5vw) translateY(-6vh)',
         },
         ".transform-projects-mobile-m": {
-          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(1.7) translateX(23.5vw) translateY(-3vh)',
+          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(1.5) translateX(19vw) translateY(2vh)',
         },
         ".transform-projects-mobile-l": {
-          'transform': 'rotateY(180deg) scaleY(3.4) scaleX(2) translateX(26vw) translateY(7.5vh)',
+          'transform': 'rotateY(180deg) scaleY(2.4) scaleX(1.7) translateX(17vw) translateY(-2vh)',
         },
         ".transform-projects-sm": {
-          'transform': 'rotateY(180deg) scaleY(8) scaleX(3) translateX(34.6vw) translateY(3vh)',
+          'transform': 'rotateY(180deg) scaleY(7) scaleX(2.45) translateX(24.3vw) translateY(4vh)',
         },
         ".transform-projects-mobile-hd": {
-          'transform': 'rotateY(180deg) scaleY(9) scaleX(3) translateX(36vw) translateY(5.5vh)',
+          'transform': 'rotateY(180deg) scaleY(7) scaleX(2.8) translateX(26vw) translateY(4vh)',
         },
         ".transform-projects-md": {
-          'transform': 'rotateY(180deg) scaleY(9) scaleX(3.2) translateX(37vw) translateY(5vh)',
+          'transform': 'rotateY(180deg) scaleY(7) scaleX(3.1) translateX(27vw) translateY(5vh)',
         },
         ".transform-projects-lg": {
-          'transform': 'rotateY(180deg) scaleY(4.5) scaleX(4.2) translateX(1.6vw) translateY(-18vh)',
+          'transform': 'rotateY(180deg) scaleY(4.2) scaleX(4.2) translateX(-0.2vw) translateY(-16vh)',
         },
         ".transform-projects-mobile-full-hd":{
           'transform': 'rotateY(180deg) scaleY(4.2) scaleX(5.1) translateX(0.5vw) translateY(-16vh)',
@@ -149,31 +149,31 @@ const config: Config = {
           'transform': 'rotateY(180deg) scaleY(3.8) scaleX(4.7) translateX(-0.7vw) translateY(-15vh) ',
         },
         ".transform-projects-2xl": {
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.2) translateX(-1.6vw) translateY(-18vh)',
+          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(4.2) translateX(-1.6vw) translateY(-22vh)',
         },
         ".transform-projects-desktop-full-hd":{
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(3.4) translateX(-3.2vw) translateY(-18vh)',
+          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(3.4) translateX(-3.2vw) translateY(-22vh)',
         },
         ".transform-contact-mobile-s": {
-          'transform': 'rotateY(180deg) scaleY(2.8) scaleX(1.7) translateX(22vw) translateY(-10vh)',
+          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(1.6) translateX(22vw) translateY(-8vh)',
         },
         ".transform-contact-mobile-m": {
-          'transform': 'rotateY(180deg) scaleY(2.8) scaleX(1.9) translateX(26vw) translateY(-1vh)',
+          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(1.7) translateX(22vw) translateY(3vh)',
         },
         ".transform-contact-mobile-l": {
-          'transform': 'rotateY(180deg) scaleY(3.3) scaleX(2.2) translateX(28.5vw) translateY(7vh)',
+          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(1.8) translateX(20vw) translateY(2vh)',
         },
         ".transform-contact-sm": {
-          'transform': 'rotateY(180deg) scaleY(8.5) scaleX(3.4) translateX(36vw) translateY(4vh)',
+          'transform': 'rotateY(180deg) scaleY(8.5) scaleX(2.75) translateX(26vw) translateY(6vh)',
         },
         ".transform-contact-mobile-hd": {
-          'transform': 'rotateY(180deg) scaleY(8.5) scaleX(3.2) translateX(37.5vw) translateY(5vh)',
+          'transform': 'rotateY(180deg) scaleY(8.5) scaleX(3.2) translateX(27.5vw) translateY(7vh)',
         },
         ".transform-contact-md": {
-          'transform': 'rotateY(180deg) scaleY(8.5) scaleX(3.5) translateX(38vw) translateY(5.5vh)',
+          'transform': 'rotateY(180deg) scaleY(8) scaleX(3.4) translateX(28.2vw) translateY(6vh)',
         },
         ".transform-contact-lg": {
-          'transform': 'rotateY(180deg) scaleY(4.5) scaleX(4.7) translateX(8vw) translateY(-18vh)',
+          'transform': 'rotateY(180deg) scaleY(4.2) scaleX(4.6) translateX(5.8vw) translateY(-16vh)',
         },
         ".transform-contact-mobile-full-hd":{
           'transform': 'rotateY(180deg) scaleY(4.2) scaleX(5.1) translateX(-4.3vw) translateY(-15vh)',
@@ -188,10 +188,10 @@ const config: Config = {
           'transform': 'rotateY(180deg) scaleY(3.8) scaleX(4.7) translateX(3.3vw) translateY(-15vh) ',
         },
         ".transform-contact-2xl": {
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(4.2) translateX(2.2vw) translateY(-18vh)',
+          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(4.2) translateX(2.2vw) translateY(-22vh)',
         },
         ".transform-contact-desktop-full-hd":{
-          'transform': 'rotateY(180deg) scaleY(3.6) scaleX(3.4) translateX(0.5vw) translateY(-18vh)',
+          'transform': 'rotateY(180deg) scaleY(2.6) scaleX(3.4) translateX(0.5vw) translateY(-22vh)',
         },
         ".preserve-3d": {
           'transformStyle': 'preserve-3d'
